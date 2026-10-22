@@ -1,0 +1,9 @@
+{{- /* 画像 + キャプション. src は "/img/xxx.png" のようにサイトルートからのパスで指定する */ -}}
+{{- $src := .Get "src" -}}
+{{- if strings.HasPrefix $src "/" }}{{ $src = strings.TrimPrefix "/" $src | relURL }}{{ end -}}
+<figure>
+  <img src="{{ $src }}" alt="{{ .Get "alt" }}">
+  {{- with .Get "caption" }}
+  <figcaption>{{ . }}</figcaption>
+  {{- end }}
+</figure>

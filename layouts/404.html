@@ -1,0 +1,9 @@
+{{ define "main" }}
+<h1>ページが見つかりません / Page not found</h1>
+<p>お探しのページは移動または削除された可能性があります．</p>
+<p>
+  {{- range site.Home.AllTranslations }}
+  <a href="{{ .RelPermalink }}">{{ .Title }}{{ if ne .Language.Lang "ja" }} ({{ .Language.Label }}){{ end }}</a>
+  {{- end }}
+</p>
+{{ end }}

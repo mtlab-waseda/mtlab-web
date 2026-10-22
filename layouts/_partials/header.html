@@ -1,0 +1,14 @@
+<header id="banner-top">
+  <nav id="logo">
+    {{- $page := . }}
+    {{- range site.Menus.main }}
+    <a href="{{ .URL }}" class="menu_item{{ if $page.IsMenuCurrent "main" . }} current{{ end }}">{{ .Name }}</a>
+    {{- end }}
+    {{- /* 他言語版へのリンク. 対応する翻訳ページがなければその言語のトップへ */}}
+    {{- range site.Home.Translations }}
+    {{- $url := .RelPermalink }}
+    {{- range where $page.Translations "Language.Lang" .Language.Lang }}{{ $url = .RelPermalink }}{{ end }}
+    <a href="{{ $url }}" class="menu_item" hreflang="{{ .Language.Locale }}"><small>{{ .Language.Label }} page</small></a>
+    {{- end }}
+  </nav>
+</header>

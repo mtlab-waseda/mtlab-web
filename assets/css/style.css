@@ -1,0 +1,198 @@
+/* 旧サイト (css2/style.css) のデザインを踏襲 */
+
+body, h1, h2, h3, h4, h5, h6,
+p, table, th, tr, td, div, dl, dt, dd, figure {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 13px;
+	vertical-align: middle;
+}
+
+body {
+	background-color: #e0e0e0;
+	font-family: sans-serif;
+	line-height: 1.6;
+}
+
+h1 {
+	background: url("../img/design/h1.png") no-repeat bottom left;
+	color: #008BCF;
+	font-size: 20px;
+	font-weight: normal;
+	margin: 50px 20px 20px 0;
+	padding: 20px 0 10px 100px;
+}
+
+h2 {
+	background: url("../img/design/h2.png") no-repeat top left;
+	color: #008BCF;
+	font-size: 15px;
+	font-weight: normal;
+	margin: 30px 40px 10px 40px;
+	padding: 2px 0 2px 35px;
+}
+
+p {
+	margin: 0 50px 1em;
+}
+
+ol, ul {
+	margin: 0 50px 1em;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: 10px auto;
+}
+
+figcaption,
+figcaption p {
+	text-align: center;
+	font-size: 12px;
+	color: #909090;
+	margin-bottom: 1em;
+}
+
+table {
+	margin: 10px auto;
+	padding: 0 50px;
+	border-spacing: 1px;
+}
+
+th {
+	background: #50AAFF url("../img/design/top_banner.jpg") repeat-x top left;
+	color: #ffffff;
+	padding: 2px 15px;
+	text-align: center;
+	white-space: nowrap;
+	border-radius: 5px;
+}
+
+td {
+	border-bottom: 1px dotted #909090;
+	padding: 0 10px;
+}
+
+tr:hover, tr:active {
+	background: #DDEEFF;
+}
+
+dt {
+	margin-left: 4em;
+}
+
+dd {
+	margin-left: 6em;
+}
+
+dd p {
+	margin: 0;
+}
+
+#banner-top {
+	background: url("../img/design/top_banner.jpg") repeat-x bottom left;
+	min-height: 207px;
+	padding-top: 15px;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+#logo {
+	background: url("../img/design/logo.png") no-repeat top left;
+	padding: 70px 0 0 20px;
+	margin: 0 35px 0 30px;
+	color: #ffffff;
+}
+
+a.menu_item:link, a.menu_item:visited {
+	background: url("../img/design/pset_n.png") no-repeat center left;
+	color: #fafafa;
+	font-size: 13px;
+	margin-right: 20px;
+	padding-left: 12px;
+	white-space: nowrap;
+	text-decoration: none;
+}
+
+a.menu_item:active, a.menu_item:hover, a.menu_item.current {
+	background-image: url("../img/design/pset_o.png");
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+#banner-bottom {
+	background: url("../img/design/bottom_banner.jpg") repeat-x bottom left;
+	font-size: 10px;
+	text-align: center;
+	padding-top: 100px;
+	color: #ffffff;
+}
+
+#contents {
+	display: block;
+	text-align: left;
+	color: #000000;
+	background-color: #ffffff;
+	padding: 0 30px;
+	overflow-wrap: anywhere;
+}
+
+#container {
+	width: 80%;
+	margin: auto;
+	background-color: #ffffff;
+	box-shadow: 0 0 10px #aaaaaa;
+}
+
+a:link {
+	color: #008BCF;
+}
+
+a:visited {
+	color: #008BFF;
+}
+
+a:active, a:hover {
+	color: #005090;
+}
+
+/* スマートフォン向け */
+@media (max-width: 760px) {
+	#container {
+		width: 100%;
+	}
+	#contents {
+		padding: 0 16px;
+	}
+	#logo {
+		margin: 0 16px;
+		padding-left: 0;
+		line-height: 2;
+	}
+	h1 {
+		margin-right: 0;
+		padding-left: 80px;
+		font-size: 17px;
+	}
+	h2, p, ol, ul {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	ul, ol {
+		padding-left: 1.5em;
+	}
+	dt, dd {
+		margin-left: 1em;
+	}
+	table {
+		display: block;
+		overflow-x: auto;
+		padding: 0;
+	}
+	th {
+		white-space: normal;
+	}
+}

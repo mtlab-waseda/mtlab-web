@@ -1,0 +1,76 @@
+baseURL = 'https://mtlab-waseda.github.io/mtlab-web/'
+title = '早稲田大学 人間科学部・大学院人間科学研究科 松居辰則研究室 -mtlab-'
+
+defaultContentLanguage = 'ja'
+defaultContentLanguageInSubdir = false
+
+# 各ページは個別の .md として管理するため一覧・タグ機能は使わない
+disableKinds = ['taxonomy', 'term', 'rss', 'section']
+
+[languages]
+  [languages.ja]
+    contentDir = 'content/ja'
+    locale = 'ja-JP'
+    label = '日本語'
+    weight = 1
+  [languages.en]
+    contentDir = 'content/en'
+    locale = 'en-US'
+    label = 'English'
+    title = 'MATSUI Tatsunori Laboratory, Waseda University -mtlab-'
+    weight = 2
+
+[languages.ja.menus]
+  [[languages.ja.menus.main]]
+    name = 'トップページ'
+    pageRef = '/'
+    weight = 1
+  [[languages.ja.menus.main]]
+    name = '構成員・設備'
+    pageRef = '/members'
+    weight = 2
+  [[languages.ja.menus.main]]
+    name = '研究テーマ'
+    pageRef = '/research'
+    weight = 3
+  [[languages.ja.menus.main]]
+    name = '研究業績'
+    pageRef = '/publications'
+    weight = 4
+  [[languages.ja.menus.main]]
+    name = '配属希望の皆様へ'
+    pageRef = '/join'
+    weight = 5
+  [[languages.ja.menus.main]]
+    name = 'リンク'
+    pageRef = '/links'
+    weight = 6
+  [[languages.ja.menus.main]]
+    name = 'お問い合わせ'
+    pageRef = '/contact'
+    weight = 7
+
+[languages.en.menus]
+  [[languages.en.menus.main]]
+    name = 'Top page'
+    pageRef = '/'
+    weight = 1
+  [[languages.en.menus.main]]
+    name = 'Research Theme'
+    pageRef = '/research'
+    weight = 2
+  [[languages.en.menus.main]]
+    name = 'Publication'
+    pageRef = '/publications'
+    weight = 3
+  [[languages.en.menus.main]]
+    name = 'Contact Information'
+    pageRef = '/contact'
+    weight = 4
+
+[markup.goldmark.renderer]
+  # 表 (構成員一覧など) は HTML のまま記述しているため
+  unsafe = true
+
+[markup.goldmark.parser.attribute]
+  block = true
